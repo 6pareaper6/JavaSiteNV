@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:object="${game}" method="post" th:action="@{/review}">
+    <label>Steam Id:<span th:errors="*{id}"></span>
+        <input th:field="*{id}" autofocus required type="number">
+    </label>
+
+    <label>Game name:<span th:errors="*{name}"></span>
+        <input th:field="*{name}" required>
+    </label>
+    <button>Add game</button>
+</form>
+
+
+</body>
+</html>

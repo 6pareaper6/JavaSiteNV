@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>gameindex</p>
+<ul>
+    <li th:each="game:${gameList}">
+        <a th:text="*{game.name}" th:href="@{review/{gameid}(gameid=${game.id})}"></a>
+    </li>
+</ul>
+</body>
+</html>

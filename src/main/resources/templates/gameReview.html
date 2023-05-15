@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+gamereview
+<div th:if="${gameReview}" th:object="${gameReview}">
+    <span th:text="${steamId}"></span>
+</div>
+</body>
+</html>
